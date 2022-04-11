@@ -11,7 +11,8 @@ Um restaurante precisa poder registrar suas vendas de forma fácil e rápida, es
 - A linguagem utilizada deve ser JS.
 - Deverá ser desenvolvido utilizando as versões mais recentes.
 - Utilizar dos [Padrões Devio](https://github.com/deviobr/code-patterns).
-- Seguir o [Protótipo]().
+- Seguir o [Protótipo](https://xd.adobe.com/view/426c6e77-3eac-40e9-8262-41ef5a325fce-173f/?fullscreen).
+- Ser responsivo.
 
 ### Histórias de Usuário 🧑‍🍳
 - O usuário poderá ver uma pequena quantidade de produtos na tela para seleção rápida.
@@ -21,7 +22,6 @@ Um restaurante precisa poder registrar suas vendas de forma fácil e rápida, es
 - Deverá poder incluir o nome do cliente para ser entregue o pedido.
 - Ao finalizar o pedido este deverá ser impresso em uma via para o cliente (impressora térmica), liberando a tela para o próximo pedido.
   - Obs: A solução é muito mais simples do que se parece.
-- Todas etapas acima deveram ser em apenas uma tela.
 - O pedido deverá aparecer para a cozinha junto ao nome do cliente.
 - A cozinha poderá dar baixa nos pedidos concluídos.
 
