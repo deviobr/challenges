@@ -2,9 +2,9 @@ version: "3"
 
 services:
   db:
-    container_name: Deviobr_DB
-    image: mysql:latest
+    container_name: Devio_DB
+    image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: MYSQL_PASSWORD
+      MYSQL_ROOT_PASSWORD: '270481'
     ports:
       - 3308:3306
