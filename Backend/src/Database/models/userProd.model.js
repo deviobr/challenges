@@ -1,51 +1,45 @@
 const UserProdModel = (sequelize, DataTypes) => {
   const UserProd = sequelize.define('UserProd', {
-    userId: {
-      primaryKey: true,
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'User',
         key: 'id'
-      }
-    },
-    productId: {
+      },
       primaryKey: true,
+      onDelete: 'cascade',
+    },
+    product_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'Product',
         key: 'id'
-      }
+      },
+      primaryKey: true,
+      onDelete: 'cascade',
     },
-    requests: DataTypes.INTEGER,
-    fullPrice: DataTypes.INTEGER
+    full_price: DataTypes.INTEGER,
+    is_done: DataTypes.TINYINT,
   },
   {
     timestamps: false,
-    tableName: 'userProds',
+    tableName: 'UserProds',
     underscored: true
   });
 
   UserProdModel.associate = (models) => {
     UserProdModel.belongsToMany(models.User, {
-      foreignKey: 'userId',
       as: 'Users',
       through: UserProdModel,
-      otherKey: 'productId'
+      foreignKey: 'user_id',
+      otherKey: 'product_id'
     });
 
-    UserProdModel.belongsTo(models.Product, {
-      foreignKey: 'productId',
+    UserProdModel.belongsToMany(models.Product, {
       as: 'Products',
       through: UserProdModel,
-      otherKey: 'userId'
-    });
-
-    UserProdModel.belongsTo(models.Kitchen, {
-      foreignKey: 'userId', as: 'Kitchens'
-    });
-
-    UserProdModel.belongsTo(models.Kitchen, {
-      foreignKey: 'productId', as: 'Kitchens'
+      foreignKey: 'product_id',
+      otherKey: 'user_id'
     });
   }
 

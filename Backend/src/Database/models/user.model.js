@@ -1,26 +1,17 @@
 const UserModel = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
     name: DataTypes.STRING,
-    amountForPayment: DataTypes.INTEGER
+    amount_for_payment: DataTypes.INTEGER
   },
   {
     timestamps: false,
-    tableName: 'users',
+    tableName: 'Users',
     underscored: true
   });
 
   User.associate = (models) => {
     User.hasMany(models.UserProd, {
-      foreignKey: 'UserId', as: 'UserProds'
-    });
-
-    User.hasMany(models.UserProd, {
-      foreignKey: 'productId', as: 'UserProds'
+      foreignKey: 'user_id', as: 'UserProds'
     });
   }
 

@@ -1,26 +1,15 @@
 const ProductModel = (sequelize, DataTypes) => {
   const Product = sequelize.define('Product', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
     name: DataTypes.STRING,
-    code: DataTypes.STRING,
+    code: DataTypes.BIGINT,
     quantity: DataTypes.INTEGER,
     price: DataTypes.INTEGER
   },
   {
     timestamps: false,
-    tableName: 'products',
+    tableName: 'Products',
     underscored: true
   });
-
-  Product.associate = (models) => {
-    Product.hasMany(models.UserProd, {
-      foreignKey: 'productId', as: 'UserProds'
-    })
-  }
 
   return Product;
 }

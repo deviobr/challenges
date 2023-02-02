@@ -6,7 +6,6 @@ module.exports = {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
-        allowNull: false,
         primaryKey: true,
       },
       name: {
@@ -14,7 +13,7 @@ module.exports = {
         allowNull: false,
       },
       code: {
-        type: Sequelize.STRING,
+        type: Sequelize.BIGINT,
         allowNull: false
       },
       quantity: {

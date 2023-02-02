@@ -4,22 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pre:start": "npx sequelize-cli db:create && npx sequelize-cli db:migrate",
+    "pre:start": "npm run drop &&  npm run create && npm run migrate && npm run seed",
     "drop": "npx sequelize-cli db:drop",
+    "create": "npx sequelize-cli db:create",
+    "migrate": "npx sequelize-cli db:migrate",
     "seed": "npx sequelize-cli db:seed:all",
     "test": "mocha src/Tests/**/*$NAME*.test.js --exit",
     "test:coverage": "nyc --include='src/**/*.js' npm run test",
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "joi": "^17.7.0",
+    "mocha": "^10.2.0",
     "mysql2": "^3.0.1",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "sinon": "^15.0.1"
   },
   "devDependencies": {
     "eslint": "^8.32.0",
