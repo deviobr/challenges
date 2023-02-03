@@ -1,7 +1,7 @@
 # challenges-devioBR
 
 ## :memo: Descrição
-Projeto baseado em um restaurante, optei por usar o mysql juntamente com o sequelize para facilitar a associação do produto ao usuário. Utilizando uma tabela intermediaria
+Projeto baseado em um restaurante, optei por usar o mysql juntamente com o sequelize para facilitar a associação do produto e usuário. Utilizando uma tabela intermediaria chamada UserProd. usei alguns conceitos de normalização, segui padrões restApi para manter as boas práticas. E para realizar os testes de integração e testes unitários utilizei o mocha, chai e sinon.
 
 
 ## :books: Funcionalidades
