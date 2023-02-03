@@ -1,6 +1,7 @@
 # challenges-devioBR
 
 ## :memo: Descrição
+Projeto baseado em um restaurante, optei por usar o mysql juntamente com o sequelize para facilitar a associação do produto ao usuário. Utilizando uma tabela intermediaria
 
 
 ## :books: Funcionalidades
@@ -42,3 +43,6 @@ npm run test:coverage
 npm run up
 
 ```
+## link da documentação:
+
+<a href="https://documenter.getpostman.com/view/25184771/2s935mtRAQ">Clique aqui</a><p></p>
