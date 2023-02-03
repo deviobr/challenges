@@ -9,11 +9,12 @@
     "create": "npx sequelize-cli db:create",
     "migrate": "npx sequelize-cli db:migrate",
     "seed": "npx sequelize-cli db:seed:all",
-    "test": "mocha src/Tests/**/*$NAME*.test.js --exit",
+    "test": "mocha --timeout 50000 --color src/tests/**/*$NAME*.test.js --exit",
     "test:coverage": "nyc --include='src/**/*.js' npm run test",
     "start": "nodemon src/server.js",
     "up": "docker-compose up -d",
-    "down": "docker-compose down"
+    "down": "docker-compose down",
+    "debug": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
   "dependencies": {
     "chai": "^4.3.7",
     "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "joi": "^17.7.0",
@@ -35,6 +37,7 @@
     "eslint-plugin-import": "^2.27.5",
     "express-async-errors": "^3.1.1",
     "nodemon": "^2.0.20",
-    "sequelize-cli": "^6.6.0"
+    "sequelize-cli": "^6.6.0",
+    "sequelize-test-helpers": "1.4"
   }
 }

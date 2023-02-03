@@ -14,7 +14,7 @@ const deliveryService = {
   },
   next: async () => {
     const result = await UserProd.findAll();
-    const requestNext = await result.filter((next) => next.is_done != 0);
+    const requestNext = await result.filter(({ is_done }) => is_done != 0);
 
     return requestNext;
   },

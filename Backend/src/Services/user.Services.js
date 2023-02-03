@@ -19,24 +19,21 @@ const userService = {
     const { full_price, is_done, product_ids } = data;
     const request = await User.findByPk(data.user_id);
 
-    const { dataValues } = request;
-    const user_id = dataValues.id;
+    const user_id = request.id;
 
-    const test = await Promise.all(product_ids.map((product_id) => UserProd.create({
+    const created = await Promise.all(product_ids.map((product_id) => UserProd.create({
       user_id, product_id, full_price, is_done
     })));
 
-    return test;
+    return created;
   },
   payment: async (userId) => {
-    const result = await User.findByPk(userId, {
-      include: [ { model: UserProd, as: 'UserProds' } ]
-    });
+    const { amount_for_payment } = await User.findByPk(userId);
+    const { full_price } = await UserProd.findOne({ where: { user_id: userId } });
 
-    const total = result.UserProds[0].full_price;
-    const discount = result.amount_for_payment - total;
+    const discount = amount_for_payment - full_price;
 
-    return { 'total': total, 'discount': discount };
+    return { "total": full_price, "discount": discount };
   },
 };
 
