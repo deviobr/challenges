@@ -24,7 +24,7 @@ para salvar e manipular os dados no banco;
 Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
 ```
 - Clone o repositório
-git clone git@github.com:Lucas5k/Projeto-Car-Shop.git
+git clone git@github.com:Lucas5k/challenges-devioBR.git
 
 - Entre no arquivo do projeto
 cd Projeto-Car-Shop
