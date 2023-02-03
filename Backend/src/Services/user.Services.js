@@ -28,7 +28,7 @@ const userService = {
     return created;
   },
   payment: async (userId) => {
-    const { amount_for_payment } = await User.findByPk(userId);
+    const { amount_for_payment } = await User.findOne({ where: { id: userId }});
     const { full_price } = await UserProd.findOne({ where: { user_id: userId } });
 
     const discount = amount_for_payment - full_price;

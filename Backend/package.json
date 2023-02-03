@@ -10,6 +10,7 @@
     "migrate": "npx sequelize-cli db:migrate",
     "seed": "npx sequelize-cli db:seed:all",
     "test": "mocha --timeout 50000 --color src/tests/**/*$NAME*.test.js --exit",
+    "test:coverage": "nyc --include='src/**/*.js' npm run test",
     "start": "nodemon src/server.js",
     "up": "docker-compose up -d",
     "down": "docker-compose down",

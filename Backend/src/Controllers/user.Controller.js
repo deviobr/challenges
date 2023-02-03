@@ -27,7 +27,11 @@ const userController = {
     res.status(201).json(result);
   },
   payment: async (req, res) => {
-    const { id } = req.params;
+    const ID = req.params.id;
+
+    // fiz isso somente pelo teste, pois no teste unitario ele não tras o nome id somente o numero,
+    // ai o teste quebrava, pois, o validateId espera que venha o nome "id";
+    const id = ID;
 
     const data = await validations.validateId(id);
     const result = await userService.payment(data);

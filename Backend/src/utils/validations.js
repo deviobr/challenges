@@ -21,7 +21,7 @@ const validations = {
     return value;
   },
   validateId: async (id) => {
-    if (!id.length) {
+    if (!id) {
       const error = new Error('id field is required');
       error.name = 'BadRequests';
 

@@ -8,9 +8,8 @@ const userService = {
       
       return true;
     } catch (e) {
+      const error = new Error('"product_ids" not found');
       error.name = 'BadRequests';
-      error.message = '"product_ids" not found'
-
       throw error;
     }
   },
