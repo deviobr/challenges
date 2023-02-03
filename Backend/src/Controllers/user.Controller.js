@@ -29,7 +29,7 @@ const userController = {
   payment: async (req, res) => {
     const { id } = req.params;
 
-    const data = await validations.validateId(User, id);
+    const data = await validations.validateId(id);
     const result = await userService.payment(data);
 
     res.status(200).json(result);

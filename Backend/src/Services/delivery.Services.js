@@ -33,7 +33,6 @@ const deliveryService = {
   },
   delete: async (userId) => {
     const result = await UserProd.findByPk(userId);
-    // const request = await result.filter(({ is_done }) => is_done == 0);
 
     if (result.is_done === 0) {
       await UserProd.destroy({ where: { user_id: userId} });

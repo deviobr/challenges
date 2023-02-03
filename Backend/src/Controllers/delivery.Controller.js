@@ -6,7 +6,7 @@ const deliveryController = {
   delivery: async (req, res) => {
     const { id } = req.params;
 
-    const data = await validations.validateId(User, id);
+    const data = await validations.validateId(id);
     const result = await deliveryService.delivery(data);
 
     res.status(200).json(result);
@@ -14,7 +14,7 @@ const deliveryController = {
   finalize: async (req, res) => {
     const { id } = req.params;
 
-    const data = await validations.validateId(User, id);
+    const data = await validations.validateId(id);
     await deliveryService.finalize(data);
 
     res.sendStatus(204);
@@ -27,7 +27,7 @@ const deliveryController = {
   request: async (req, res) => {
     const { id } = req.params;
 
-    const data = await validations.validateId(User, id);
+    const data = await validations.validateId(id);
     const result = await deliveryService.request(data);
 
     res.status(200).json(result);
@@ -35,7 +35,7 @@ const deliveryController = {
   delete: async (req, res) => {
     const { id } = req.params;
 
-    const data = await validations.validateId(User, id);
+    const data = await validations.validateId(id);
     await deliveryService.delete(data);
 
     res.sendStatus(204);

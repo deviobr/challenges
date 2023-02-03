@@ -10,7 +10,6 @@
     "migrate": "npx sequelize-cli db:migrate",
     "seed": "npx sequelize-cli db:seed:all",
     "test": "mocha --timeout 50000 --color src/tests/**/*$NAME*.test.js --exit",
-    "test:coverage": "nyc --include='src/**/*.js' npm run test",
     "start": "nodemon src/server.js",
     "up": "docker-compose up -d",
     "down": "docker-compose down",
@@ -28,6 +27,7 @@
     "joi": "^17.7.0",
     "mocha": "^10.2.0",
     "mysql2": "^3.0.1",
+    "nyc": "^15.1.0",
     "sequelize": "^6.28.0",
     "sinon": "^15.0.1"
   },

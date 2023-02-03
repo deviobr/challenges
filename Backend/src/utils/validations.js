@@ -1,4 +1,5 @@
 const Joi = require("joi");
+const { User } = require('../Database/models');
 
 const validations = {
   validateRecipes: (data) => {
@@ -19,14 +20,14 @@ const validations = {
 
     return value;
   },
-  validateId: async (model, id) => {
+  validateId: async (id) => {
     if (!id.length) {
       const error = new Error('id field is required');
       error.name = 'BadRequests';
 
       throw error;
     };
-    const existsId = await model.findByPk(id);
+    const existsId = await User.findOne({ where: { id } });
     if (!existsId) {
       const error = new Error('id not found');
       error.name = 'NotFound';
@@ -36,6 +37,6 @@ const validations = {
 
     return id;
   },
-}
+};
 
 module.exports = validations;
