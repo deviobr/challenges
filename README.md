@@ -32,13 +32,15 @@ cd challenges-devioBR
 npm install
 
 - Inicialize o projeto
-npm run dev
+npm start
 
 - Inicialize os testes
-npm run test:dev
+npm run test
+
+- Verificar a cobertura de test
+npm run test:coverage
+
+- Subir o container mysql, para conseguir utilizar
+npm run up
 
 ```
-## :soon: Implementação futura
-Refatorar o código, e aplicar meus conhecimentos em SOLID.
-
-## :handshake: Projeto feito individualmente!
