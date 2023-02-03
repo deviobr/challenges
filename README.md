@@ -13,12 +13,11 @@ para salvar e manipular os dados no banco;
 
 
 ## <h3>:wrench: Tecnologias utilizadas</h3>
-- Typescript
 - Mocha, Chai e Sinon
-- Camadas MSC
-- MongoDB
-- ODM mongoose
+- Mysql
+- Sequelize
 - Node.js/Express
+- Docker
 
 ## :rocket: Rodando o projeto
 Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
@@ -27,7 +26,7 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
 git clone git@github.com:Lucas5k/challenges-devioBR.git
 
 - Entre no arquivo do projeto
-cd Projeto-Car-Shop
+cd challenges-devioBR
 
 - Instale as dependências
 npm install
