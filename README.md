@@ -46,3 +46,8 @@ npm run up
 ## link da documentação:
 
 <a href="https://documenter.getpostman.com/view/25184771/2s935mtRAQ">Clique aqui</a><p></p>
+
+
+## link para visualizar as tabelas do sequelize:
+
+<a href="https://drive.google.com/file/d/1iISBsjaOUD_gJV2ID9pr3ctdlF_ic7Ec/view">Clique aqui</a><p></p>
