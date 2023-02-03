@@ -1,15 +1,13 @@
 # challenges-devioBR
 
 ## :memo: Descrição
-Décimo segundo projeto no módulo de back-end, Nesse projeto desenvolvi uma APi de uma locadora de carros.
-Reforeci meus conhecimentos aprendidos sobre camadas de serviço MSC (Model, Service e Controller) e arquitetura RestAPI.
-Utilizei Typescript e alguns dos Principios SOLID para o desenvolvimento, e utilizei o MongoDB juntamente com o Mongoose
-para salvar e manipular os dados no banco;
 
 
 ## :books: Funcionalidades
-<ol><b>Funcionalidade 1</b>: Desenvolver a API Pesquisar, Cadastrar, Editar e Remover;</ol>
-<ol><b>Funcionalidade 2</b>: Teste de unidade, testando cada Camada da aplicação;</ol>
+<ol><b>Funcionalidade 1</b>: Pesquisar todos produtos;</ol>
+<ol><b>Funcionalidade 2</b>: Pesquisar um produto por (name, code);</ol>
+<ol><b>Funcionalidade 3</b>: Apagar um pedido;</ol>
+<ol><b>Funcionalidade 4</b>: Criar um pedido;</ol>
 
 
 ## <h3>:wrench: Tecnologias utilizadas</h3>
